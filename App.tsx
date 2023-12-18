@@ -15,24 +15,25 @@ const [count,setCount]=useState(100);
 
 useEffect(()=>{
   console.warn('Data has been updated:', data);
-
   return ()=>{
-
   };
 },[data,count]);
 
 
 const incrementData=()=>{
 setData(data+1)
+}
+
+const incrementCount=()=>{
 setCount(count+1)
 }
 
 return ( <View>
   <Text >Data: {data}</Text>
-  <Text>Count: {data}</Text>
+  <Text>Count: {count}</Text>
 
   <Button title="Increment Data" onPress={incrementData} />
-  <Button title="Increment Count" onPress={incrementData} />
+  <Button title="Increment Count" onPress={incrementCount} />
 
 </View>)
 }
